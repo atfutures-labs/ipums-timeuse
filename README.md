@@ -262,7 +262,12 @@ ggplot (times, aes (year, time, colour = country_mode)) +
     theme_solarized ()
 ```
 
-<img src="README-plot-1.png" width="672" /> Remember that rates of bicycle trips are multiplied by 5 for the UK and US, but not for the NL. The drastic decreases in the final points for the UK (2005) seem anomalous, because it is unlikely that walking actually decreased by almost one half. If we consider all other results to be reliable, they suggest that patterns in the Netherlands have remained largely stable over 20 years, with a slight decrease in rates of walking, and a notable increase in cycling between 2000 and 2005. Active transport generally decreased in the US until 2000, after which both walking and cycling have progressively increased to respectively represent around 7 and just over 1%. Rates in the UK appear, in contrast, to have increased much more rapidly.
+<img src="README-plot-1.png" width="672" />
+
+Remember that rates of bicycle trips are multiplied by 5 for the UK and US, but not for the NL. The drastic decreases in the final points for the UK (2005) seem anomalous, because it is unlikely that walking actually decreased by almost one half. If we consider all other results to be reliable, they suggest that patterns in the Netherlands have remained largely stable over 20 years, with a slight decrease in rates of walking, and a notable increase in cycling between 2000 and 2005. Active transport generally decreased in the US until 2000, after which both walking and cycling have progressively increased to respectively represent around 7 and just over 1%. Rates in the UK appear, in contrast, to have increased much more rapidly.
+
+Additional Analyses
+-------------------
 
 The following code quantifies the relative rates of change in the US post-2000, and in the UK up to and including 2001. The analysis will be grouped by `COUNTRY` and `trans_mode`, requiring the following lines to prepare the data for analysis:
 

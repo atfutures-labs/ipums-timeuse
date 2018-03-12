@@ -1,0 +1,6 @@
+# vim files
+.*.un~
+.*.swp
+
+# the raw data file
+data/mtus_00001.dat.gz
