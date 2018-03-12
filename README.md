@@ -1,4 +1,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+Multinational Time Use Study Analysis of Active Transport
+=========================================================
+
 This repository contains just one script used to analyse changes in transport behaviour of time. The data were obtained from the [Multinational Time Use Study (MTUS)](https://www.ipums.org/timeuse.shtml) data, part of the [Integrated Public Use Microdata Series (IPUMS)](https://www.ipums.org). MTUS data are jointly hosted by the Minnesota Population Center at the University of Minnesota, and the [Centre for Time Use Research](https://www.timeuse.org/mtus) at the University of Oxford.
 
 Data downloads are accompanied by a corresponding "ddi" file, included here both in [`.xml`](./data/mtus_00001.xml) and [plain text](./data/mtus_00001.cbk) formats. The data download can be reproduced by following the structure of these files.
@@ -78,6 +81,9 @@ countries
 #> [1] "AT" "CA" "FI" "FR" "NL" "ES" "UK" "US"
 ```
 
+Filter to active transport data
+-------------------------------
+
 The two tables represent the hierarchical structure of the data. These data can then be filtered down to only those records in which people walked, rode bicycles, or used cars. We will only use the `ACTIVITY` table here.
 
 ``` r
@@ -106,6 +112,9 @@ bike <- dplyr::filter (act, MAIN == 44)
 walk <- dplyr::filter (act, MAIN == 43)
 allmodes <- dplyr::filter (act, MTRAV > 0)
 ```
+
+Aggregate activity times
+------------------------
 
 Then aggregate those data to generate total durations of each activity for each year and country. The following function converts those durations to proportional times, enabling proportions of cycling and walking to be directly compared in relation to total travel time. (The latter is admittedly a rough estimate
 
@@ -205,7 +214,10 @@ The US also only has usable data after 1998, so
 times$US <- dplyr::filter (times$US, year > 1998)
 ```
 
-Then convert these to a single `data.frame` to be plotted
+Final data wrangling and plotting
+---------------------------------
+
+These data can now be converted to a single `data.frame` to be plotted
 
 ``` r
 times$UK$COUNTRY <- "UK"

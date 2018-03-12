@@ -22,6 +22,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+# Multinational Time Use Study Analysis of Active Transport
+
 This repository contains just one script used to analyse changes in transport
 behaviour of time. The data were obtained from the [Multinational Time Use Study
 (MTUS)](https://www.ipums.org/timeuse.shtml) data, part of the [Integrated
@@ -77,6 +79,8 @@ countries <- unique (dat$PERSON$COUNTRY)
 countries
 ```
 
+## Filter to active transport data
+
 The two tables represent the hierarchical structure of the data. These data can
 then be filtered down to only those records in which people walked, rode
 bicycles, or used cars. We will only use the `ACTIVITY` table here.
@@ -92,6 +96,9 @@ bike <- dplyr::filter (act, MAIN == 44)
 walk <- dplyr::filter (act, MAIN == 43)
 allmodes <- dplyr::filter (act, MTRAV > 0)
 ```
+
+## Aggregate activity times
+
 Then aggregate those data to generate total durations of each activity for each
 year and country. The following function converts those durations to
 proportional times, enabling proportions of cycling and walking to be directly
@@ -145,7 +152,10 @@ The US also only has usable data after 1998, so
 ```{r filter-us-times}
 times$US <- dplyr::filter (times$US, year > 1998)
 ```
-Then convert these to a single `data.frame` to be plotted
+
+## Final data wrangling and plotting
+
+These data can now be converted to a single `data.frame` to be plotted
 ```{r bind-countries}
 times$UK$COUNTRY <- "UK"
 times$US$COUNTRY <- "US"
