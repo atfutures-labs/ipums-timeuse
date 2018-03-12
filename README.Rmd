@@ -25,8 +25,8 @@ knitr::opts_chunk$set(
 # Multinational Time Use Study Analysis of Active Transport
 
 This repository contains just one script used to analyse changes in transport
-behaviour of time. The data were obtained from the [Multinational Time Use Study
-(MTUS)](https://www.ipums.org/timeuse.shtml) data, part of the [Integrated
+behaviour over time. The data were obtained from the [Multinational Time Use
+Study (MTUS)](https://www.ipums.org/timeuse.shtml), part of the [Integrated
 Public Use Microdata Series (IPUMS)](https://www.ipums.org). MTUS data are
 jointly hosted by the Minnesota Population Center at the University of
 Minnesota, and the [Centre for Time Use Research](https://www.timeuse.org/mtus)
@@ -34,11 +34,14 @@ at the University of Oxford.
 
 Data downloads are accompanied by a corresponding "ddi" file, included here both
 in [`.xml`](./data/mtus_00001.xml) and [plain text](./data/mtus_00001.cbk)
-formats. The data download can be reproduced by following the structure of these
-files.
+formats, as well as an equivalent [`.html` document](./data/mtus_00001.dat.html)
+for easy reading. This file codifies the hierarchical structure of the data,
+including descriptions of all variable encodings.  The data download can be
+reproduced by following the structure of these files.
 
-The downloaded data include the following variables and corresponding codes
-(where "MAIN" describes the main activity):
+The corresponding data are very large, and therefore not directly included
+within this repository. They include the following variables and corresponding
+codes (where "MAIN" describes the main activity):
 
 | variable | code | description |
 | --- | --- | --- |
@@ -61,8 +64,7 @@ The downloaded data include the following variables and corresponding codes
 IPUMS data can now be read directly into **R** using the fabulous [`ipumsr`
 package](https://github.com/mnpopcenter/ipumsr). The primary functions simply
 need the "ddi" file describing the data structure. It is presumed here that the
-data themselves reside in the same directory. (They are not included in this
-repository because of their very large size).
+data themselves reside in the same directory (generally in `.gz` form).
 
 ```{r read-data}
 library (ipumsr)
@@ -78,35 +80,39 @@ over 9 million activities from nearly 500,000 individuals from these countries:
 countries <- unique (dat$PERSON$COUNTRY)
 countries
 ```
+The following analyses will use `tidyverse` functionality, so before we start we
+load all packages:
+```{r tidyverse, message = FALSE}
+require (tidyverse)
+```
 
 ## Filter to active transport data
 
 The two tables represent the hierarchical structure of the data. These data can
-then be filtered down to only those records in which people walked, rode
-bicycles, or used cars. We will only use the `ACTIVITY` table here.
+then be filtered down to only those records describing transport activities.  We
+will only use the `ACTIVITY` table here.
 ```{r filter-activity}
-act <- dplyr::filter (dat$ACTIVITY, MTRAV > 0 | MAIN %in% c (43:44, 63:68))
+act <- filter (dat$ACTIVITY, MTRAV > 0 | MAIN %in% c (43:44, 63:68))
 act
 ```
 We still have almost 1.5 million travel activities.  Now let's make equivalent
 tables for each activity, plus one for all travel activities combined
 (represented by `MTRAV > 0`):
 ```{r filter-activity2}
-bike <- dplyr::filter (act, MAIN == 44)
-walk <- dplyr::filter (act, MAIN == 43)
-allmodes <- dplyr::filter (act, MTRAV > 0)
+bike <- filter (act, MAIN == 44 | MTRAV == 4)
+walk <- filter (act, MAIN == 43 | MTRAV == 3)
+allmodes <- filter (act, MTRAV > 0)
 ```
+Note that `MTRAV == 4` describes "other physical transport," which may or may
+not represent bicycle-borne transport.
 
 ## Aggregate activity times
 
-Then aggregate those data to generate total durations of each activity for each
-year and country. The following function converts those durations to
-proportional times, enabling proportions of cycling and walking to be directly
-compared in relation to total travel time. (The latter is admittedly a rough
-estimate
+The data in the resultant tables then need to be aggregated to generate total
+durations of each activity for each year and country. The following function
+converts those durations to proportions of cycling and walking as a fraction of
+total travel time.
 ```{r gettimes-fn}
-require (magrittr)
-require (tibble)
 gettimes <- function (ci = "CA")
 {
     tb <- bike %>%
@@ -126,8 +132,6 @@ gettimes <- function (ci = "CA")
     if (nrow (tw) == 0)
         message (ci, ": no walking data")
     year <- sort (unique (c (tb$YEAR, tw$YEAR, ta$YEAR)))
-    if (length (year) < 2)
-        message (ci, ": no multi-year data")
     year <- year [which (year %in% ta$YEAR)]
 
     times <- tibble (year = year,
@@ -137,20 +141,23 @@ gettimes <- function (ci = "CA")
     times [is.na (times)] <- 0
     times$walk <- times$walk / times$allmodes
     times$bike <- times$bike / times$allmodes
+    if (nrow (times) < 3) # require >= 3 years of data
+        message (ci, ": no multi-year data")
     return (times)
 }
 times <- lapply (countries, gettimes)
 names (times) <- countries
 ```
 Most countries do not unfortunately have sufficient data to analyse further,
-leaving only the UK and the US.
+leaving only the UK, the US, and the Netherlands.
 ```{r filter-to-ukus}
-times <- times [which (countries %in% c ("UK", "US"))]
+times <- times [which (countries %in% c ("UK", "US", "NL"))]
 times
 ```
-The US also only has usable data after 1998, so
+The US also only has usable data after 1998, and the Netherlands after 1975, so
 ```{r filter-us-times}
-times$US <- dplyr::filter (times$US, year > 1998)
+times$US <- filter (times$US, year > 1998)
+times$NL <- filter (times$NL, year > 1975)
 ```
 
 ## Final data wrangling and plotting
@@ -159,18 +166,18 @@ These data can now be converted to a single `data.frame` to be plotted
 ```{r bind-countries}
 times$UK$COUNTRY <- "UK"
 times$US$COUNTRY <- "US"
+times$NL$COUNTRY <- "NL"
 times <- do.call (rbind, times)
 ```
-Bicycle journeys generally represent around one fifth of the proportion of
-walking journeys, so we multiply them by 5 to enable both to be plotted on the
-same scale
+Bicycle journeys in the US and UK generally represent around one fifth of the
+proportion of walking journeys, so we multiply them by 5 to enable both to be
+plotted on the same scale
 ```{r bike-times-5}
-times$bike <- times$bike * 5
+times$bike [times$COUNTRY != "NL"] <- times$bike [times$COUNTRY != "NL"] * 5
 ```
 Now merge the variables into a single `country_trans_mode` variable for easy
 plotting:
 ```{r gather, message = FALSE}
-require (tidyr)
 times <- gather (times, key = trans_mode, value = time, walk, bike)
 times$country_mode <- paste0 (times$COUNTRY, ":", times$trans_mode)
 ```
@@ -178,10 +185,61 @@ These data may now be used to plot changes in rates of walking and cycling over
 time, using the [`solarized` colours](http://ethanschoonover.com/solarized) from
 the [`ggthemes` package](https://github.com/jrnold/ggthemes).
 ```{r plot, message = FALSE}
-require (ggplot2)
 require (ggthemes)
 ggplot (times, aes (year, time, colour = country_mode)) +
     geom_line () +
     geom_point () +
     theme_solarized ()
 ```
+Remember that rates of bicycle trips are multiplied by 5 for the UK and US, but
+not for the NL. The drastic decreases in the final points for the UK (2005) seem
+anomalous, because it is unlikely that walking actually decreased by almost one
+half. If we consider all other results to be reliable, they suggest that
+patterns in the Netherlands have remained largely stable over 20 years, with a
+slight decrease in rates of walking, and a notable increase in cycling between
+2000 and 2005. Active transport generally decreased in the US until 2000, after
+which both walking and cycling have progressively increased to respectively
+represent around 7 and just over 1%. Rates in the UK appear, in contrast, to
+have increased much more rapidly.
+
+The following code quantifies the relative rates of change in the US post-2000,
+and in the UK up to and including 2001. The analysis will be grouped by
+`COUNTRY` and `trans_mode`, requiring the following lines to prepare the data
+for analysis:
+```{r filter-times}
+timesf <- filter (times, !((country_mode == "UK:walk" & year == 2005) |
+                           (country_mode == "UK:bike" & year == 2005) |
+                           (country_mode == "US:walk" & year <= 2000) |
+                           (country_mode == "US:bike" & year <= 2000))) %>%
+                group_by (COUNTRY, trans_mode) %>%
+                nest ()
+```
+The analysis can then be implemented with the following code:
+```{r model-times}
+mod <- function (df)
+    summary (lm (time ~ year, data = df))
+timesf <- timesf %>%
+    mutate (mod = map (timesf$data, mod)) %>%
+    mutate (coeffs = mod %>% map (broom::tidy)) %>%
+    unnest (coeffs) %>%
+    filter (term == "year")
+```
+The second `mutate` call maps the `lm` models to `data.frame` objects of
+coefficients, which generates a `term` column containing values for both
+`(Intercept)`, and `year`, where the last line filters only the latter. Finally,
+converts rates of change to annual percentages, and remove a couple of
+statistics to help us concentrate on what we want to know. Rates of change for
+cycling are also divided by 5 to account for the previous multiplication that
+was used for plotting.
+```{r}
+timesf$std.error <- timesf$statistic <- NULL
+timesf$estimate <- timesf$estimate * 100
+timesf$estimate [timesf$COUNTRY != "NL" & timesf$trans_mode == "bike"] <- 
+    timesf$estimate [timesf$COUNTRY != "NL" & timesf$trans_mode == "bike"] / 5
+timesf
+```
+All changes are significant except for those in the Netherlands. Rates of
+walking increased by almost 1% per year in the UK, and just over 0.1% in the US.
+In contrast to these changes in rates of walking, rates of cycling increased
+relatively much more rapidly in the US (0.04% per year) than in the UK (0.11%
+per year).
