@@ -1,0 +1,177 @@
+---
+title: "Multinational Time Use Study Analysis"
+output:
+  rmarkdown::html_vignette:
+    self_contained: no
+
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r opts, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = TRUE,
+  message = TRUE,
+  width = 120,
+  comment = "#>",
+  fig.retina = 2,
+  fig.path = "README-"
+)
+```
+
+This repository contains just one script used to analyse changes in transport
+behaviour of time. The data were obtained from the [Multinational Time Use Study
+(MTUS)](https://www.ipums.org/timeuse.shtml) data, part of the [Integrated
+Public Use Microdata Series (IPUMS)](https://www.ipums.org). MTUS data are
+jointly hosted by the Minnesota Population Center at the University of
+Minnesota, and the [Centre for Time Use Research](https://www.timeuse.org/mtus)
+at the University of Oxford.
+
+Data downloads are accompanied by a corresponding "ddi" file, included here both
+in [`.xml`](./data/mtus_00001.xml) and [plain text](./data/mtus_00001.cbk)
+formats. The data download can be reproduced by following the structure of these
+files.
+
+The downloaded data include the following variables and corresponding codes
+(where "MAIN" describes the main activity):
+
+| variable | code | description |
+| --- | --- | --- |
+| MAIN | 043 | walking |
+| MAIN | 044 | cycling |
+| MAIN | 063 | travel to/from work |
+| MAIN | 064 | education travel |
+| MAIN | 065 | voluntary/civic/religious travel |
+| MAIN | 066 | child/adult care travel |
+| MAIN | 067 | shop, person/child care travel |
+| MAIN | 068 | other travel |
+| MTRAV | 01 | car |
+| MTRAV | 02 | public transport |
+| MTRAV | 03 | walk/on foot |
+| MTRAV | 04 | other physical transport |
+| MTRAV | 05 | other/unspecified |
+
+## Reading the data
+
+IPUMS data can now be read directly into **R** using the fabulous [`ipumsr`
+package](https://github.com/mnpopcenter/ipumsr). The primary functions simply
+need the "ddi" file describing the data structure. It is presumed here that the
+data themselves reside in the same directory. (They are not included in this
+repository because of their very large size).
+
+```{r read-data}
+library (ipumsr)
+dat <- read_ipums_micro_list (ddi = "./data/mtus_00001.xml",
+                              vars = c ("COUNTRY", "YEAR", "AGE", "SEX",
+                                        "TIME", "MAIN", "MTRAV"))
+dat
+```
+Note that the `dat$ACTIVITY$TIME` variable quantifies the duration of a travel
+activity, and is the key variable we will be analysing here.  These data include
+over 9 million activities from nearly 500,000 individuals from these countries:
+```{r}
+countries <- unique (dat$PERSON$COUNTRY)
+countries
+```
+
+The two tables represent the hierarchical structure of the data. These data can
+then be filtered down to only those records in which people walked, rode
+bicycles, or used cars. We will only use the `ACTIVITY` table here.
+```{r filter-activity}
+act <- dplyr::filter (dat$ACTIVITY, MTRAV > 0 | MAIN %in% c (43:44, 63:68))
+act
+```
+We still have almost 1.5 million travel activities.  Now let's make equivalent
+tables for each activity, plus one for all travel activities combined
+(represented by `MTRAV > 0`):
+```{r filter-activity2}
+bike <- dplyr::filter (act, MAIN == 44)
+walk <- dplyr::filter (act, MAIN == 43)
+allmodes <- dplyr::filter (act, MTRAV > 0)
+```
+Then aggregate those data to generate total durations of each activity for each
+year and country. The following function converts those durations to
+proportional times, enabling proportions of cycling and walking to be directly
+compared in relation to total travel time. (The latter is admittedly a rough
+estimate
+```{r gettimes-fn}
+require (magrittr)
+require (tibble)
+gettimes <- function (ci = "CA")
+{
+    tb <- bike %>%
+        dplyr::filter (COUNTRY == ci) %>%
+        dplyr::group_by (YEAR) %>%
+        dplyr::summarize (time = sum (TIME))
+    tw <- walk %>%
+        dplyr::filter (COUNTRY == ci) %>%
+        dplyr::group_by (YEAR) %>%
+        dplyr::summarize (time = sum (TIME))
+    ta <- allmodes %>%
+        dplyr::filter (COUNTRY == ci) %>%
+        dplyr::group_by (YEAR) %>%
+        dplyr::summarize (time = sum (TIME))
+    if (nrow (tb) == 0)
+        message (ci, ": no bike data")
+    if (nrow (tw) == 0)
+        message (ci, ": no walking data")
+    year <- sort (unique (c (tb$YEAR, tw$YEAR, ta$YEAR)))
+    if (length (year) < 2)
+        message (ci, ": no multi-year data")
+    year <- year [which (year %in% ta$YEAR)]
+
+    times <- tibble (year = year,
+                     walk = tw$time [match (year, tw$YEAR)],
+                     bike = tb$time [match (year, tb$YEAR)],
+                     allmodes = ta$time [match (year, ta$YEAR)])
+    times [is.na (times)] <- 0
+    times$walk <- times$walk / times$allmodes
+    times$bike <- times$bike / times$allmodes
+    return (times)
+}
+times <- lapply (countries, gettimes)
+names (times) <- countries
+```
+Most countries do not unfortunately have sufficient data to analyse further,
+leaving only the UK and the US.
+```{r filter-to-ukus}
+times <- times [which (countries %in% c ("UK", "US"))]
+times
+```
+The US also only has usable data after 1998, so
+```{r filter-us-times}
+times$US <- dplyr::filter (times$US, year > 1998)
+```
+Then convert these to a single `data.frame` to be plotted
+```{r bind-countries}
+times$UK$COUNTRY <- "UK"
+times$US$COUNTRY <- "US"
+times <- do.call (rbind, times)
+```
+Bicycle journeys generally represent around one fifth of the proportion of
+walking journeys, so we multiply them by 5 to enable both to be plotted on the
+same scale
+```{r bike-times-5}
+times$bike <- times$bike * 5
+```
+Now merge the variables into a single `country_trans_mode` variable for easy
+plotting:
+```{r gather, message = FALSE}
+require (tidyr)
+times <- gather (times, key = trans_mode, value = time, walk, bike)
+times$country_mode <- paste0 (times$COUNTRY, ":", times$trans_mode)
+```
+These data may now be used to plot changes in rates of walking and cycling over
+time, using the [`solarized` colours](http://ethanschoonover.com/solarized) from
+the [`ggthemes` package](https://github.com/jrnold/ggthemes).
+```{r plot, message = FALSE}
+require (ggplot2)
+require (ggthemes)
+ggplot (times, aes (year, time, colour = country_mode)) +
+    geom_line () +
+    geom_point () +
+    theme_solarized ()
+```

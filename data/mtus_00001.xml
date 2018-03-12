@@ -1,0 +1,1848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ipums-ddi-xslt.xsl"?>
+<codeBook xmlns="ddi:codebook:2_5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd" version="2.5" ID="ddi2-134552_mtus_00001.dat-www.mtusdata.org">
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>Codebook for an MTUS Data Extract</titl>
+        <subTitl>DDI 2.5 metadata describing the extract file  'mtus_00001.dat'</subTitl>
+        <IDNo>ddi2-134552_mtus_00001.dat-www.mtusdata.org</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">Minnesota Population Center</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="MPC" affiliation="University of Minnesota" role="Documentation">Minnesota Population Center</producer>
+        <prodDate date="2018-03-11">March 11, 2018</prodDate>
+        <prodPlac>Minnesota Population Center, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact affiliation="University of Minnesota" URI="http://pop.umn.edu">Minnesota Population Center</contact>
+      </distStmt>
+    </citation>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>User Extract mtus_00001.dat</titl>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">Minnesota Population Center</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="MPC" affiliation="University of Minnesota" role="Documentation">Minnesota Population Center</producer>
+        <prodDate date="2018-03-11">March 11, 2018</prodDate>
+        <prodPlac>Minnesota Population Center, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact affiliation="University of Minnesota" URI="http://pop.umn.edu">Minnesota Population Center</contact>
+      </distStmt>
+      <serStmt>
+        <serName abbr="mtus">MTUS-X</serName>
+        <serInfo>DOI:10.18128/D062.V1.1</serInfo>
+      </serStmt>
+      <verStmt>
+        <version date="2018-03-11"/>
+      </verStmt>
+    </citation>
+    <stdyInfo>
+      <subject>
+        <topcClas vocab="IPUMS">Technical Person Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Core Demographic Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Work Status Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Health Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Weights Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Technical Activity Variables -- ACTIVITY</topcClas>
+        <topcClas vocab="IPUMS">Episode details Variables -- ACTIVITY</topcClas>
+      </subject>
+      <sumDscr ID="sdatref-32">
+        <timePrd event="single" date="1992">1992</timePrd>
+        <nation abbr="at">Austria</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-35">
+        <timePrd event="single" date="2010">2010</timePrd>
+        <nation abbr="ca">Canada</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-36">
+        <timePrd event="single" date="1979">1979</timePrd>
+        <nation abbr="fi">Finland</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-33">
+        <timePrd event="single" date="1985">1985</timePrd>
+        <nation abbr="fr">France</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-34">
+        <timePrd event="single" date="1998">1998</timePrd>
+        <nation abbr="fr">France</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-25">
+        <timePrd event="single" date="1975">1975</timePrd>
+        <nation abbr="nl">Netherlands</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-27">
+        <timePrd event="single" date="1985">1985</timePrd>
+        <nation abbr="nl">Netherlands</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-28">
+        <timePrd event="single" date="1990">1990</timePrd>
+        <nation abbr="nl">Netherlands</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-30">
+        <timePrd event="single" date="2000">2000</timePrd>
+        <nation abbr="nl">Netherlands</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-31">
+        <timePrd event="single" date="2005">2005</timePrd>
+        <nation abbr="nl">Netherlands</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-18">
+        <timePrd event="single" date="2009">2009</timePrd>
+        <nation abbr="es">Spain</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-20">
+        <timePrd event="single" date="1974">1974</timePrd>
+        <nation abbr="uk">United Kingdom</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-21">
+        <timePrd event="single" date="1983">1983</timePrd>
+        <nation abbr="uk">United Kingdom</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-22">
+        <timePrd event="single" date="1987">1987</timePrd>
+        <nation abbr="uk">United Kingdom</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-23">
+        <timePrd event="single" date="1995">1995</timePrd>
+        <nation abbr="uk">United Kingdom</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-19">
+        <timePrd event="single" date="2000">2000</timePrd>
+        <nation abbr="uk">United Kingdom</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-24">
+        <timePrd event="single" date="2005">2005</timePrd>
+        <nation abbr="uk">United Kingdom</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-1">
+        <timePrd event="single" date="1965">1965</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-2">
+        <timePrd event="single" date="1975">1975</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-3">
+        <timePrd event="single" date="1985">1985</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-4">
+        <timePrd event="single" date="1993">1993</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-5">
+        <timePrd event="single" date="1995">1995</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-6">
+        <timePrd event="single" date="1998">1998</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-7">
+        <timePrd event="single" date="2003">2003</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-8">
+        <timePrd event="single" date="2004">2004</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-9">
+        <timePrd event="single" date="2005">2005</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-10">
+        <timePrd event="single" date="2006">2006</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-11">
+        <timePrd event="single" date="2007">2007</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-12">
+        <timePrd event="single" date="2008">2008</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-13">
+        <timePrd event="single" date="2009">2009</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-14">
+        <timePrd event="single" date="2010">2010</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-15">
+        <timePrd event="single" date="2011">2011</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-16">
+        <timePrd event="single" date="2012">2012</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+    </stdyInfo>
+    <dataAccs>
+      <useStmt>
+        <confDec required="no"><![CDATA[None]]></confDec>
+        <contact affiliation="Minnesota Population Center" URI="http://mtusdata.org/">MTUS</contact>
+        <citReq><![CDATA[Publications and research reports based on the MTUS database must cite it appropriately. The citation should include the following:
+
+Kimberly Fisher, Jonathan Gershuny, Sarah M. Flood, Joan Garcia Roman, and Sandra L. Hofferth. Multinational Time Use Study Extract System: Version 1.1 [dataset]. Minneapolis, MN: University of Minnesota, 2017. https://doi.org/10.18128/D062.V1.1
+
+The licensing agreement for use of MTUS data requires that users supply us with the title and full citation for any publications, research reports, or educational materials making use of the data or documentation. Please add your citation to the IPUMS bibliography: http://bibliography.ipums.org/]]></citReq>
+        <conditions><![CDATA[Users of MTUS data must agree to abide by the conditions of use. A user's license is valid for one year and may be renewed.  Users must agree to the following conditions:
+
+(1) No fees may be charged for use or distribution of the data.  All persons are granted a limited license to use these data, but you may not charge a fee for the data if you distribute it to others.
+
+(2) Cite IPUMS appropriately.  For information on proper citation, refer to the citation requirement section of this DDI document.
+
+(3) Tell us about any work you do using the IPUMS.  Publications, research reports, or presentations making use of MTUS should be added to our Bibliography. Continued funding for the IPUMS depends on our ability to show our sponsor agencies that researchers are using the data for productive purposes.
+
+(4) Use it for GOOD -- never for EVIL.]]></conditions>
+        <disclaimer>The user of the data acknowledges that the original collector of the data, the authorized distributor of the data, and the relevant funding agency bear no responsibility for use of the data or for interpretations or inferences based upon such uses.</disclaimer>
+      </useStmt>
+    </dataAccs>
+    <notes><![CDATA[User-provided description:  time use extract all countries all travel]]></notes>
+  </stdyDscr>
+  <fileDscr ID="ExtractData">
+    <fileTxt>
+      <fileName>mtus_00001.dat</fileName>
+      <fileCont>Microdata records</fileCont>
+      <fileStrc type="hierarchical">
+        <recGrp rectype="3" recidvar="RECTYPE" keyvar="IDENT">
+          <labl>Activity Record</labl>
+        </recGrp>
+        <recGrp rectype="2" recidvar="RECTYPE">
+          <labl>Person Record</labl>
+        </recGrp>
+      </fileStrc>
+      <fileType charset="ISO-8859-1">ISO-8859-1 data file</fileType>
+      <format>fixed length fields</format>
+      <filePlac>Minnesota Population Center, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</filePlac>
+    </fileTxt>
+  </fileDscr>
+  <dataDscr>
+    <var ID="RECTYPE" files="ExtractData" name="RECTYPE" intrvl="contin" dcml="0" rectype="2 3">
+      <location StartPos="1" width="1" EndPos="1"/>
+      <labl>Record type</labl>
+      <txt><![CDATA[RECTYPE reports respondents' recode types. Record type can be Person (P) or Activity (A).]]></txt>
+      <codInstr><![CDATA[
+RECTYPE is a 1-character alphabetic variable.]]></codInstr>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="SAMPLE" files="ExtractData" name="SAMPLE" intrvl="discrete" dcml="0" rectype="2 3">
+      <location StartPos="2" width="6" EndPos="7"/>
+      <labl>Sample</labl>
+      <txt><![CDATA[SAMPLE indicates the dataset to which the case belongs. Each sample receives a unique 6-digit code. The code is structured as follows:
+
+The first two digits are the codes used in COUNTRY
+The next four digits are the year used to identify the dataset
+
+
+Some surveys include data from more than one year (YEAR).]]></txt>
+      <catgry>
+        <catValu>AT1992</catValu>
+        <labl>Austria 1992</labl>
+      </catgry>
+      <catgry>
+        <catValu>CA2010</catValu>
+        <labl>Canada 2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>ES2002</catValu>
+        <labl>Spain 2002</labl>
+      </catgry>
+      <catgry>
+        <catValu>ES2009</catValu>
+        <labl>Spain 2009</labl>
+      </catgry>
+      <catgry>
+        <catValu>FI1979</catValu>
+        <labl>Finland 1979</labl>
+      </catgry>
+      <catgry>
+        <catValu>FR1985</catValu>
+        <labl>France 1985</labl>
+      </catgry>
+      <catgry>
+        <catValu>FR1998</catValu>
+        <labl>France 1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>NL1975</catValu>
+        <labl>Netherlands 1975</labl>
+      </catgry>
+      <catgry>
+        <catValu>NL1980</catValu>
+        <labl>Netherlands 1980</labl>
+      </catgry>
+      <catgry>
+        <catValu>NL1985</catValu>
+        <labl>Netherlands 1985</labl>
+      </catgry>
+      <catgry>
+        <catValu>NL1990</catValu>
+        <labl>Netherlands 1990</labl>
+      </catgry>
+      <catgry>
+        <catValu>NL1995</catValu>
+        <labl>Netherlands 1995</labl>
+      </catgry>
+      <catgry>
+        <catValu>NL2000</catValu>
+        <labl>Netherlands 2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>NL2005</catValu>
+        <labl>Netherlands 2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>UK1974</catValu>
+        <labl>United Kingdom 1974</labl>
+      </catgry>
+      <catgry>
+        <catValu>UK1983</catValu>
+        <labl>United Kingdom 1983</labl>
+      </catgry>
+      <catgry>
+        <catValu>UK1987</catValu>
+        <labl>United Kingdom 1987</labl>
+      </catgry>
+      <catgry>
+        <catValu>UK1995</catValu>
+        <labl>United Kingdom 1995</labl>
+      </catgry>
+      <catgry>
+        <catValu>UK2000</catValu>
+        <labl>United Kingdom 2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>UK2005</catValu>
+        <labl>United Kingdom 2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>US1965</catValu>
+        <labl>United States 1965</labl>
+      </catgry>
+      <catgry>
+        <catValu>US1975</catValu>
+        <labl>United States 1975</labl>
+      </catgry>
+      <catgry>
+        <catValu>US1985</catValu>
+        <labl>United States 1985</labl>
+      </catgry>
+      <catgry>
+        <catValu>US1993</catValu>
+        <labl>United States 1993</labl>
+      </catgry>
+      <catgry>
+        <catValu>US1995</catValu>
+        <labl>United States 1995</labl>
+      </catgry>
+      <catgry>
+        <catValu>US1998</catValu>
+        <labl>United States 1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2003</catValu>
+        <labl>United States 2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2004</catValu>
+        <labl>United States 2004</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2005</catValu>
+        <labl>United States 2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2006</catValu>
+        <labl>United States 2006</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2007</catValu>
+        <labl>United States 2007</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2008</catValu>
+        <labl>United States 2008</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2009</catValu>
+        <labl>United States 2009</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2010</catValu>
+        <labl>United States 2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2011</catValu>
+        <labl>United States 2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2012</catValu>
+        <labl>United States 2012</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2013</catValu>
+        <labl>United States 2013</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2014</catValu>
+        <labl>United States 2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>US2015</catValu>
+        <labl>United States 2015</labl>
+      </catgry>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="character"/>
+    </var>
+    <var ID="IDENT" files="ExtractData" name="IDENT" intrvl="contin" dcml="0" rectype="2 3">
+      <location StartPos="8" width="9" EndPos="16"/>
+      <labl>Identifier</labl>
+      <txt><![CDATA[IDENT is an identifier to link person and activity records. It is unique within but not across surveys. Together IDENT and SAMPLE uniquely identify individuals.]]></txt>
+      <codInstr><![CDATA[This is a 9-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="COUNTRY" files="ExtractData" name="COUNTRY" intrvl="discrete" dcml="0" rectype="2 3">
+      <location StartPos="17" width="2" EndPos="18"/>
+      <labl>Country or region of survey</labl>
+      <txt><![CDATA[COUNTRY gives the country in which the survey was conducted.]]></txt>
+      <catgry>
+        <catValu>AT</catValu>
+        <labl>Austria</labl>
+      </catgry>
+      <catgry>
+        <catValu>CA</catValu>
+        <labl>Canada</labl>
+      </catgry>
+      <catgry>
+        <catValu>ES</catValu>
+        <labl>Spain</labl>
+      </catgry>
+      <catgry>
+        <catValu>FI</catValu>
+        <labl>Finland</labl>
+      </catgry>
+      <catgry>
+        <catValu>FR</catValu>
+        <labl>France</labl>
+      </catgry>
+      <catgry>
+        <catValu>NL</catValu>
+        <labl>Netherlands</labl>
+      </catgry>
+      <catgry>
+        <catValu>UK</catValu>
+        <labl>United Kingdom</labl>
+      </catgry>
+      <catgry>
+        <catValu>US</catValu>
+        <labl>USA</labl>
+      </catgry>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="character"/>
+    </var>
+    <var ID="HLDID" files="ExtractData" name="HLDID" intrvl="contin" dcml="0" rectype="2 3">
+      <location StartPos="19" width="16" EndPos="34"/>
+      <labl>Household id</labl>
+      <txt><![CDATA[HLDID is drawn from the original data and may be used to match MTUS data back to the original survey. 
+
+In samples where more than one household member completed a diary, HLDID uniquely identifies households, but not individuals. In surveys where only one person per household completed a diary, HLDID is the original value in the data. When no household identifier is included in the original data, HLDID=0]]></txt>
+      <codInstr><![CDATA[This is a 16-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="PERSID" files="ExtractData" name="PERSID" intrvl="contin" dcml="0" rectype="2 3">
+      <location StartPos="35" width="14" EndPos="48"/>
+      <labl>Person/diarist identifier</labl>
+      <txt><![CDATA[PERSID uniquely identifies diarists within a given household. The combination of HLDIDand PERSID uniquely identifies each diarist in a given sample.]]></txt>
+      <codInstr><![CDATA[This is a 14-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="DIARY" files="ExtractData" name="DIARY" intrvl="discrete" dcml="0" rectype="2 3">
+      <location StartPos="49" width="2" EndPos="50"/>
+      <labl>Diary order</labl>
+      <txt><![CDATA[DIARY records the order in which diaries were completed. For samples in which only one diary was completed per respondent, all values are 1. For samples in which multiple diary days were completed per respondent, values start at 1 and increment by 1 until each diary has been numbered in the order in which they were completed.]]></txt>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>1st diary day</labl>
+      </catgry>
+      <catgry>
+        <catValu>02</catValu>
+        <labl>2nd diary day</labl>
+      </catgry>
+      <catgry>
+        <catValu>03</catValu>
+        <labl>3rd diary day</labl>
+      </catgry>
+      <catgry>
+        <catValu>04</catValu>
+        <labl>4th diary day</labl>
+      </catgry>
+      <catgry>
+        <catValu>05</catValu>
+        <labl>5th diary day</labl>
+      </catgry>
+      <catgry>
+        <catValu>06</catValu>
+        <labl>6th diary day</labl>
+      </catgry>
+      <catgry>
+        <catValu>07</catValu>
+        <labl>7th diary day</labl>
+      </catgry>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="YEAR" files="ExtractData" name="YEAR" intrvl="discrete" dcml="0" rectype="2 3">
+      <location StartPos="51" width="4" EndPos="54"/>
+      <labl>Year diary kept</labl>
+      <txt><![CDATA[YEAR records the four-digit year when the diary was kept.]]></txt>
+      <catgry>
+        <catValu>1986</catValu>
+        <labl>1986</labl>
+      </catgry>
+      <catgry>
+        <catValu>1993</catValu>
+        <labl>1993</labl>
+      </catgry>
+      <catgry>
+        <catValu>1992</catValu>
+        <labl>1992</labl>
+      </catgry>
+      <catgry>
+        <catValu>2015</catValu>
+        <labl>2015</labl>
+      </catgry>
+      <catgry>
+        <catValu>2014</catValu>
+        <labl>2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>2013</catValu>
+        <labl>2013</labl>
+      </catgry>
+      <catgry>
+        <catValu>1985</catValu>
+        <labl>1985</labl>
+      </catgry>
+      <catgry>
+        <catValu>1976</catValu>
+        <labl>1976</labl>
+      </catgry>
+      <catgry>
+        <catValu>1975</catValu>
+        <labl>1975</labl>
+      </catgry>
+      <catgry>
+        <catValu>1966</catValu>
+        <labl>1966</labl>
+      </catgry>
+      <catgry>
+        <catValu>1965</catValu>
+        <labl>1965</labl>
+      </catgry>
+      <catgry>
+        <catValu>1994</catValu>
+        <labl>1994</labl>
+      </catgry>
+      <catgry>
+        <catValu>1995</catValu>
+        <labl>1995</labl>
+      </catgry>
+      <catgry>
+        <catValu>1998</catValu>
+        <labl>1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>1999</catValu>
+        <labl>1999</labl>
+      </catgry>
+      <catgry>
+        <catValu>2000</catValu>
+        <labl>2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>2003</catValu>
+        <labl>2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>2004</catValu>
+        <labl>2004</labl>
+      </catgry>
+      <catgry>
+        <catValu>2005</catValu>
+        <labl>2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>2006</catValu>
+        <labl>2006</labl>
+      </catgry>
+      <catgry>
+        <catValu>2007</catValu>
+        <labl>2007</labl>
+      </catgry>
+      <catgry>
+        <catValu>2008</catValu>
+        <labl>2008</labl>
+      </catgry>
+      <catgry>
+        <catValu>2009</catValu>
+        <labl>2009</labl>
+      </catgry>
+      <catgry>
+        <catValu>2010</catValu>
+        <labl>2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>2011</catValu>
+        <labl>2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>2012</catValu>
+        <labl>2012</labl>
+      </catgry>
+      <catgry>
+        <catValu>1974</catValu>
+        <labl>1974</labl>
+      </catgry>
+      <catgry>
+        <catValu>1983</catValu>
+        <labl>1983</labl>
+      </catgry>
+      <catgry>
+        <catValu>1984</catValu>
+        <labl>1984</labl>
+      </catgry>
+      <catgry>
+        <catValu>1987</catValu>
+        <labl>1987</labl>
+      </catgry>
+      <catgry>
+        <catValu>2001</catValu>
+        <labl>2001</labl>
+      </catgry>
+      <catgry>
+        <catValu>2002</catValu>
+        <labl>2002</labl>
+      </catgry>
+      <catgry>
+        <catValu>1980</catValu>
+        <labl>1980</labl>
+      </catgry>
+      <catgry>
+        <catValu>1990</catValu>
+        <labl>1990</labl>
+      </catgry>
+      <catgry>
+        <catValu>1979</catValu>
+        <labl>1979</labl>
+      </catgry>
+      <concept vocab="IPUMS">Technical Person Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="AGE" files="ExtractData" name="AGE" intrvl="contin" dcml="0" rectype="2">
+      <location StartPos="55" width="3" EndPos="57"/>
+      <labl>Age</labl>
+      <txt><![CDATA[AGE reports the age of respondents. 
+
+When age is recorded in categories, a mid-point of each age group is assigned, for example, 17 for age group 15-19. When surveys only included the year of birth of respondents, AGE was computed by subtracting the year of birth from the year of the survey. To protect the anonymity of the oldest respondents, age is topcoded. Users should note differences in topcodes across countries and years.]]></txt>
+      <codInstr><![CDATA[This is a 3-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="SEX" files="ExtractData" name="SEX" intrvl="discrete" dcml="0" rectype="2">
+      <location StartPos="58" width="2" EndPos="59"/>
+      <labl>Sex</labl>
+      <txt><![CDATA[SEX reports whether the individual is male or female.]]></txt>
+      <catgry>
+        <catValu>-8</catValu>
+        <labl>Missing</labl>
+      </catgry>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>Man</labl>
+      </catgry>
+      <catgry>
+        <catValu>02</catValu>
+        <labl>Woman</labl>
+      </catgry>
+      <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="EDUCA" files="ExtractData" name="EDUCA" intrvl="discrete" dcml="0" rectype="2">
+      <location StartPos="60" width="2" EndPos="61"/>
+      <labl>Education-original study codes</labl>
+      <txt><![CDATA[EDUCA is the respondent's education level as originally coded in the surveys. This variable is not harmonized. Note that values are survey-specific (see codes). 
+
+When available, the variable indicating the highest level of education completed is used. If there is no highest level of education variable, one is created from the available variables in the original survey.
+
+Users may also be interested in EDTRY which is the harmonized highest level of education. STUDENT indicates whether or not the respondent was a student at the time of the survey.]]></txt>
+      <catgry>
+        <catValu>-7</catValu>
+        <labl>Not Applicable/ Not asked</labl>
+      </catgry>
+      <catgry>
+        <catValu>-8</catValu>
+        <labl>Missing</labl>
+      </catgry>
+      <catgry>
+        <catValu>00</catValu>
+        <labl>0</labl>
+      </catgry>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>1</labl>
+      </catgry>
+      <catgry>
+        <catValu>02</catValu>
+        <labl>2</labl>
+      </catgry>
+      <catgry>
+        <catValu>03</catValu>
+        <labl>3</labl>
+      </catgry>
+      <catgry>
+        <catValu>04</catValu>
+        <labl>4</labl>
+      </catgry>
+      <catgry>
+        <catValu>05</catValu>
+        <labl>5</labl>
+      </catgry>
+      <catgry>
+        <catValu>06</catValu>
+        <labl>6</labl>
+      </catgry>
+      <catgry>
+        <catValu>07</catValu>
+        <labl>7</labl>
+      </catgry>
+      <catgry>
+        <catValu>08</catValu>
+        <labl>8</labl>
+      </catgry>
+      <catgry>
+        <catValu>09</catValu>
+        <labl>9</labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl>10</labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl>11</labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl>12</labl>
+      </catgry>
+      <catgry>
+        <catValu>13</catValu>
+        <labl>13</labl>
+      </catgry>
+      <catgry>
+        <catValu>14</catValu>
+        <labl>14</labl>
+      </catgry>
+      <catgry>
+        <catValu>15</catValu>
+        <labl>15</labl>
+      </catgry>
+      <catgry>
+        <catValu>16</catValu>
+        <labl>16</labl>
+      </catgry>
+      <catgry>
+        <catValu>17</catValu>
+        <labl>17</labl>
+      </catgry>
+      <catgry>
+        <catValu>18</catValu>
+        <labl>18</labl>
+      </catgry>
+      <catgry>
+        <catValu>19</catValu>
+        <labl>19</labl>
+      </catgry>
+      <catgry>
+        <catValu>20</catValu>
+        <labl>20</labl>
+      </catgry>
+      <catgry>
+        <catValu>21</catValu>
+        <labl>21</labl>
+      </catgry>
+      <catgry>
+        <catValu>99</catValu>
+        <labl>Not in Universe (NIU)</labl>
+      </catgry>
+      <concept vocab="IPUMS">Core Demographic Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="EMPSTAT" files="ExtractData" name="EMPSTAT" intrvl="discrete" dcml="0" rectype="2">
+      <location StartPos="62" width="2" EndPos="63"/>
+      <labl>Employment status</labl>
+      <txt><![CDATA[EMPSTAT reports the employment status of the respondent. This variable reflects attachment to the labor market. People who are retired, students, seeking work or looking after family but who work at least some hours should be coded as working part time. Category 4 ("Not in paid work") should mean no attachment to the labor force (unemployed, retired, homemaker, attending school, on maternity leave, or disability leave). 
+
+Users may also be interested in EMP which reports whether or not the respondent was employed or self-employed (i.e. had a paid job) during the week prior to the survey (or period of the reference in the questionnaire). UNEMP reports whether or not respondent was unemployed. STUDENT reports whether or not respondent was a student and RETIRED if respondent was retired. EMPSP indicates the employment status of the spouse or partner for those respondents in a couple. 
+
+WORKHRS provides information on the number of paid hours of work reported during the week prior to the survey including any overtime while EMPINCLM reports the monthly employment income.]]></txt>
+      <catgry>
+        <catValu>-8</catValu>
+        <labl>Missing</labl>
+      </catgry>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>Full-time</labl>
+      </catgry>
+      <catgry>
+        <catValu>02</catValu>
+        <labl>Part-time</labl>
+      </catgry>
+      <catgry>
+        <catValu>03</catValu>
+        <labl>Unknown job hours</labl>
+      </catgry>
+      <catgry>
+        <catValu>04</catValu>
+        <labl>Not in paid work</labl>
+      </catgry>
+      <concept vocab="IPUMS">Work Status Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="EMP" files="ExtractData" name="EMP" intrvl="discrete" dcml="0" rectype="2">
+      <location StartPos="64" width="2" EndPos="65"/>
+      <labl>Employed</labl>
+      <txt><![CDATA[EMP indicates whether or not the respondent was employed or self-employed (i.e. had a paid job) during the reference period in the original questionnaire). 
+
+EMPSTAT provides further details on the employment status of the respondent. UNEMP reports whether or not respondent was unemployed. STUDENT reports whether or not respondent was a student and RETIRED if respondent was retired. EMPSP indicates the employment status of the spouse or partner for those respondents in a couple.]]></txt>
+      <catgry>
+        <catValu>-8</catValu>
+        <labl>Missing</labl>
+      </catgry>
+      <catgry>
+        <catValu>00</catValu>
+        <labl>Not in paid work</labl>
+      </catgry>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>In paid work</labl>
+      </catgry>
+      <concept vocab="IPUMS">Work Status Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="UNEMP" files="ExtractData" name="UNEMP" intrvl="discrete" dcml="0" rectype="2">
+      <location StartPos="66" width="2" EndPos="67"/>
+      <labl>Unemployed</labl>
+      <txt><![CDATA[UNEMP indicates whether or not the respondent was unemployed during the reference period in the original survey. This variable does not differentiate between respondents who were registered as unemployed, who were not working but available for work and actively seeking work, and who self-reported they were unemployed.
+
+When combined with  EMPSTAT, this variable should distinguish unemployed people not undertaking any paid work from those with some part-time or unknown hours work time.
+
+Users may also be interested in EMP which reports whether or not the respondent was employed or self-employed (i.e. had a paid job). SCHOOL reports whether or not respondent was a student and RETIRED if respondent was retired. EMPSP indicates the employment status of the spouse or partner for those respondents in a couple.]]></txt>
+      <catgry>
+        <catValu>-8</catValu>
+        <labl>Missing</labl>
+      </catgry>
+      <catgry>
+        <catValu>00</catValu>
+        <labl>Not unemployed</labl>
+      </catgry>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>Unemployed</labl>
+      </catgry>
+      <concept vocab="IPUMS">Work Status Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="STUDENT" files="ExtractData" name="STUDENT" intrvl="discrete" dcml="0" rectype="2">
+      <location StartPos="68" width="2" EndPos="69"/>
+      <labl>Student status</labl>
+      <txt><![CDATA[STUDENT indicates whether or not the respondent was a student. This variable is coded from a question about whether or not the respondent was a student (or was enrolled in school). Where no information on whether the respondent is a student is available, but the respondent is in the age range where children are required to attend school in the country where the survey was collected, if any study activity is coded in any of the diaries from this respondent, or the diary is completed during school holidays, then this respondent is coded as a student.
+
+When combined with EMPSTAT this variable should distinguish working and non-working students.]]></txt>
+      <catgry>
+        <catValu>-7</catValu>
+        <labl>Not applicable/not asked</labl>
+      </catgry>
+      <catgry>
+        <catValu>-8</catValu>
+        <labl>Missing</labl>
+      </catgry>
+      <catgry>
+        <catValu>00</catValu>
+        <labl>Not Student</labl>
+      </catgry>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>Student</labl>
+      </catgry>
+      <concept vocab="IPUMS">Work Status Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="HEALTH" files="ExtractData" name="HEALTH" intrvl="discrete" dcml="0" rectype="2">
+      <location StartPos="70" width="2" EndPos="71"/>
+      <labl>Diarist's general health</labl>
+      <txt><![CDATA[HEALTH is drawn from a self-assessed and self-reported general health status. Respondents' general health could be rated on a four-point scale ranging from poor, fair, good, and very good.]]></txt>
+      <catgry>
+        <catValu>-7</catValu>
+        <labl>Not applicable/not asked</labl>
+      </catgry>
+      <catgry>
+        <catValu>-8</catValu>
+        <labl>Missing</labl>
+      </catgry>
+      <catgry>
+        <catValu>-9</catValu>
+        <labl>Could not be created</labl>
+      </catgry>
+      <catgry>
+        <catValu>00</catValu>
+        <labl>Poor</labl>
+      </catgry>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>Fair</labl>
+      </catgry>
+      <catgry>
+        <catValu>02</catValu>
+        <labl>Good</labl>
+      </catgry>
+      <catgry>
+        <catValu>03</catValu>
+        <labl>Very Good</labl>
+      </catgry>
+      <concept vocab="IPUMS">Health Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="PROPWT" files="ExtractData" name="PROPWT" intrvl="contin" dcml="0" rectype="2">
+      <location StartPos="72" width="16" EndPos="87"/>
+      <labl>Proposed weight</labl>
+      <txt><![CDATA[PROPWT reports the proposed weight used when population and day combined weights need to be rescaled.
+
+The main MTUS weight, PROPWT, is calculated as follows:
+
+Begin from the original survey weight (deflated if the original weight was inflated). If there is no original weight, a population weight is constructed by dividing the percentage of the population expected to be in each age/sex (and in some cases employment status) group by the percentage of cases actually in that age/sex/employment status category in the sample data (expected/achieved).
+Create a good-diary inflation factor by dividing the total number of diaries collected in the survey by the number of good diaries (total diaries/good diaries).
+Create an interim weight that starts with the same value of the weight in step 1. Second, set the value of this interim weight to 0 for all low-quality diaries (NOWGHT=0). Third, multiply the interim weight by the good diary inflation factor created in step 2 for all cases (it will stay 0 for the bad diaries).
+Compute ASEWT - a sum of the weights for each age/sex/employment status group (across all days of the week).
+Compute two further sums: ASEDayWT -- a sum of weights for each age/sex/employment status) group separately for each day of the week, and also: ASEDayCASE - the sum of the number of cases in each age/sex/employment status) group for each day of the week. (This step differs from step 4 as the sums are calculated separately for each day of the week).
+An expected sum of weights is calculated (ESW) for each day of the week: ESW = ASEWT / 7 (divided by 7 as there are 7 days of the week).
+PROPWT = (ESW / ASEDayWT) / (ASEDayCASE / ASEDayWT)
+PROPWT should have a mean of 1, and should sum to the total number of diary cases. When the weight has been applied, the weighted frequency of the diaries by the days of the week should be evenly distributed (14.3% for each day). Similarly, each age/sex group should have an even distribution of diaries across each day of the week.
+
+
+Users who are interested in the original weight may refer to OCOMBWT.]]></txt>
+      <codInstr><![CDATA[
+PROPWT is a 16 digit numeric variable.]]></codInstr>
+      <concept vocab="IPUMS">Weights Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="CLOCKST" files="ExtractData" name="CLOCKST" intrvl="contin" dcml="2" rectype="3">
+      <location StartPos="55" width="6" EndPos="60"/>
+      <labl>Start time on 24 hour clock</labl>
+      <txt><![CDATA[CLOCKST represents the time on the 24-hour clock when the episode started. 
+
+This variable is reported as a 4-digit numeric variable. The digit(s) prior to the decimal represent the hour; the two digits following the decimal represent the minute. For example:
+
+0.00 (midnight) 
+6.35 (thirty five minute past 6AM) 
+18.05 (five minutes past 6PM) 
+
+All the surveys included in the MTUS cover an observation period of 24 hours (1440 minutes), and all surveys begin at a point on the 24-hour clock where the majority of the observed population was asleep. There is considerable variability about the start-time on the 24-hour clock, both in the sense that the start time of the diaries varies from midnight to 6:00, and that the time when the diarists in different surveys (as well as in the same survey in the case of countries that span multiple time zones) start their diary in relation to Greenwich Mean Time.]]></txt>
+      <codInstr><![CDATA[
+CLOCKST  is a 4-digit numeric variable.]]></codInstr>
+      <concept vocab="IPUMS">Episode details Variables -- ACTIVITY</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="TIME" files="ExtractData" name="TIME" intrvl="contin" dcml="0" rectype="3">
+      <location StartPos="61" width="4" EndPos="64"/>
+      <labl>Duration of activity in minutes</labl>
+      <txt><![CDATA[TIME reports the duration of the activity in minutes.
+
+This variable is calculated by subtracting START from END. 
+
+TIME is only available if you select a hierarchical extract. If you request a hierarchical extract and plan to construct time use variables in your statistics package, this variable may be useful to you. Alternatively, you may use "Create time use variable" as part of this system.]]></txt>
+      <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Episode details Variables -- ACTIVITY</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="MAIN" files="ExtractData" name="MAIN" intrvl="discrete" dcml="0" rectype="3">
+      <location StartPos="65" width="3" EndPos="67"/>
+      <labl>Main activity</labl>
+      <txt><![CDATA[MAIN reports the respondent's main activity during a given episode in the time diary.
+
+MAIN codes activities into one of 69 harmonized activity categories. For example, a code of "33" in MAIN means the diarist performed voluntary work or a civic activity in that time slot.
+
+Where main activity is missing but a valid secondary activity is recorded, the main activity is recorded as the secondary activity (see SEC), and the secondary activity is coded as no reported second activity. These are cases where the diarist has reported one valid activity.
+
+If an activity cannot be coded, MAIN is assigned a value of 69. 
+
+Users should note how travel and personal care are handled in certain instances.
+
+Travel: 
+When main activity is missing but the diarist has recorded a mode of transport during this time period, we recode the missing main activity slot as unspecified travel (MAIN=62). Diarists may not record any travel when their travel episodes are very short, but may record a pattern in the diary that lets us know that they did travel and where in the day the travel took place.
+
+Some surveys collected activities in half-hour time slots. Such long observation periods will include multiple episodes on occasion. In particular, short travel episodes can be left out of the half hour slots. In the case of missing short travel in these 30-minute time slot surveys, as well as in cases where the diarist coded one activity as the main activity and travel as the secondary activity, 20 minutes of the 30 minute slot is coded as the main activity, and 10 minutes as travel. The placement of the 10 minutes of travel depends on the sequence in which the time slot occurs. If a diarist has been working at the office for 7 hours, then has a time slot with missing or secondary travel where the main activity is recorded as paid work, then in the next episode is doing activities at home, the first 20 minutes of the episode that includes travel and the last 10 minutes is coded as secondary travel. In contrast, if after seven hours of paid work, the diarist then records an episode of eating at a restaurant with secondary travel, and the next time slot is a continuation of eating out, then the first ten minutes of the time slot with the short travel episode imbedded is coded as travel and the second 20 minutes is coded as eating out in the restaurant.
+
+Personal Care:
+Diarists may not record any personal care when their episodes of personal care are short. In such diaries, you will find patterns of continuous reports of activity, and transitions where personal care is highly likely to have occurred (sleep for 2+ hours at home followed by other activities with no care, eating meals at home where the meal consumption lasts at least 10 minutes followed by other activities with no record of personal care). If such patterns are present, we make a flag variable for unreported personal care (0=no, 1=yes). If the diary is missing two basic activities, and one of these missing activities is personal care and we can flag this diary as having unreported personal care patterns, then we count this diary as a good diary. We do not alter the diary record in such cases, and users of the MTUS would have to make their own adjustments to the entries made by the diarists if they wish to account for such personal care.]]></txt>
+      <catgry>
+        <catValu>001</catValu>
+        <labl>Imputed personal or household care</labl>
+      </catgry>
+      <catgry>
+        <catValu>002</catValu>
+        <labl>Sleep and naps</labl>
+      </catgry>
+      <catgry>
+        <catValu>003</catValu>
+        <labl>Imputed sleep</labl>
+      </catgry>
+      <catgry>
+        <catValu>004</catValu>
+        <labl>Wash, dress, care for self</labl>
+      </catgry>
+      <catgry>
+        <catValu>005</catValu>
+        <labl>Meals at work or school</labl>
+      </catgry>
+      <catgry>
+        <catValu>006</catValu>
+        <labl>Meals or snacks in other places</labl>
+      </catgry>
+      <catgry>
+        <catValu>007</catValu>
+        <labl>Paid work-main job (not at home)</labl>
+      </catgry>
+      <catgry>
+        <catValu>008</catValu>
+        <labl>Paid work at home</labl>
+      </catgry>
+      <catgry>
+        <catValu>009</catValu>
+        <labl>Second or other job not at home</labl>
+      </catgry>
+      <catgry>
+        <catValu>010</catValu>
+        <labl>Unpaid work to generate household income</labl>
+      </catgry>
+      <catgry>
+        <catValu>011</catValu>
+        <labl>Travel as a part of work</labl>
+      </catgry>
+      <catgry>
+        <catValu>012</catValu>
+        <labl>Work breaks</labl>
+      </catgry>
+      <catgry>
+        <catValu>013</catValu>
+        <labl>Other time at workplace</labl>
+      </catgry>
+      <catgry>
+        <catValu>014</catValu>
+        <labl>Look for work</labl>
+      </catgry>
+      <catgry>
+        <catValu>015</catValu>
+        <labl>Regular schooling, education</labl>
+      </catgry>
+      <catgry>
+        <catValu>016</catValu>
+        <labl>Homework</labl>
+      </catgry>
+      <catgry>
+        <catValu>017</catValu>
+        <labl>Leisure and  other education or training</labl>
+      </catgry>
+      <catgry>
+        <catValu>018</catValu>
+        <labl>Food preparation, cooking</labl>
+      </catgry>
+      <catgry>
+        <catValu>019</catValu>
+        <labl>Set table, wash/put away dishes</labl>
+      </catgry>
+      <catgry>
+        <catValu>020</catValu>
+        <labl>Cleaning</labl>
+      </catgry>
+      <catgry>
+        <catValu>021</catValu>
+        <labl>Laundry, ironing, clothing repair</labl>
+      </catgry>
+      <catgry>
+        <catValu>022</catValu>
+        <labl>Maintain home/vehicle, including collect fuel</labl>
+      </catgry>
+      <catgry>
+        <catValu>023</catValu>
+        <labl>Other domestic work</labl>
+      </catgry>
+      <catgry>
+        <catValu>024</catValu>
+        <labl>Purchase goods</labl>
+      </catgry>
+      <catgry>
+        <catValu>025</catValu>
+        <labl>Consume personal care services</labl>
+      </catgry>
+      <catgry>
+        <catValu>026</catValu>
+        <labl>Consume other services</labl>
+      </catgry>
+      <catgry>
+        <catValu>027</catValu>
+        <labl>Pet care (not walk dog)</labl>
+      </catgry>
+      <catgry>
+        <catValu>028</catValu>
+        <labl>Physical, medical child care</labl>
+      </catgry>
+      <catgry>
+        <catValu>029</catValu>
+        <labl>Teach, help with homework</labl>
+      </catgry>
+      <catgry>
+        <catValu>030</catValu>
+        <labl>Read to, talk or play with child</labl>
+      </catgry>
+      <catgry>
+        <catValu>031</catValu>
+        <labl>Supervise, accompany, other child care</labl>
+      </catgry>
+      <catgry>
+        <catValu>032</catValu>
+        <labl>Adult care</labl>
+      </catgry>
+      <catgry>
+        <catValu>033</catValu>
+        <labl>Voluntary, civic, organisational act</labl>
+      </catgry>
+      <catgry>
+        <catValu>034</catValu>
+        <labl>Worship and religion</labl>
+      </catgry>
+      <catgry>
+        <catValu>035</catValu>
+        <labl>General out-of-home leisure</labl>
+      </catgry>
+      <catgry>
+        <catValu>036</catValu>
+        <labl>Attend sporting event</labl>
+      </catgry>
+      <catgry>
+        <catValu>037</catValu>
+        <labl>Cinema, theatre, opera, concert</labl>
+      </catgry>
+      <catgry>
+        <catValu>038</catValu>
+        <labl>Other public event, venue</labl>
+      </catgry>
+      <catgry>
+        <catValu>039</catValu>
+        <labl>Restaurant, café, bar, pub</labl>
+      </catgry>
+      <catgry>
+        <catValu>040</catValu>
+        <labl>Party, social event, gambling</labl>
+      </catgry>
+      <catgry>
+        <catValu>041</catValu>
+        <labl>Imputed time away from home</labl>
+      </catgry>
+      <catgry>
+        <catValu>042</catValu>
+        <labl>General sport or exercise</labl>
+      </catgry>
+      <catgry>
+        <catValu>043</catValu>
+        <labl>Walking</labl>
+      </catgry>
+      <catgry>
+        <catValu>044</catValu>
+        <labl>Cycling</labl>
+      </catgry>
+      <catgry>
+        <catValu>045</catValu>
+        <labl>Other outside recreation</labl>
+      </catgry>
+      <catgry>
+        <catValu>046</catValu>
+        <labl>Gardening/pick mushrooms</labl>
+      </catgry>
+      <catgry>
+        <catValu>047</catValu>
+        <labl>Walk dogs</labl>
+      </catgry>
+      <catgry>
+        <catValu>048</catValu>
+        <labl>Receive or visit friends</labl>
+      </catgry>
+      <catgry>
+        <catValu>049</catValu>
+        <labl>Conversation (in person, phone)</labl>
+      </catgry>
+      <catgry>
+        <catValu>050</catValu>
+        <labl>Games (social and  solitary)/other in-home social</labl>
+      </catgry>
+      <catgry>
+        <catValu>051</catValu>
+        <labl>General indoor leisure</labl>
+      </catgry>
+      <catgry>
+        <catValu>052</catValu>
+        <labl>Art or music</labl>
+      </catgry>
+      <catgry>
+        <catValu>053</catValu>
+        <labl>Correspondence (not e-mail)</labl>
+      </catgry>
+      <catgry>
+        <catValu>054</catValu>
+        <labl>Knit, crafts or hobbies</labl>
+      </catgry>
+      <catgry>
+        <catValu>055</catValu>
+        <labl>Relax, think, do nothing</labl>
+      </catgry>
+      <catgry>
+        <catValu>056</catValu>
+        <labl>Read</labl>
+      </catgry>
+      <catgry>
+        <catValu>057</catValu>
+        <labl>Listen to music or other audio content</labl>
+      </catgry>
+      <catgry>
+        <catValu>058</catValu>
+        <labl>Listen to radio</labl>
+      </catgry>
+      <catgry>
+        <catValu>059</catValu>
+        <labl>Watch tv, video, dvd, streamed film</labl>
+      </catgry>
+      <catgry>
+        <catValu>060</catValu>
+        <labl>Computer games</labl>
+      </catgry>
+      <catgry>
+        <catValu>061</catValu>
+        <labl>E-mail, surf internet, computing</labl>
+      </catgry>
+      <catgry>
+        <catValu>062</catValu>
+        <labl>No activity, imputed or recorded transport</labl>
+      </catgry>
+      <catgry>
+        <catValu>063</catValu>
+        <labl>Travel to/from work</labl>
+      </catgry>
+      <catgry>
+        <catValu>064</catValu>
+        <labl>Education travel</labl>
+      </catgry>
+      <catgry>
+        <catValu>065</catValu>
+        <labl>Voluntary/civic/religious travel</labl>
+      </catgry>
+      <catgry>
+        <catValu>066</catValu>
+        <labl>Child/adult care travel</labl>
+      </catgry>
+      <catgry>
+        <catValu>067</catValu>
+        <labl>Shop, person/hhld care travel</labl>
+      </catgry>
+      <catgry>
+        <catValu>068</catValu>
+        <labl>Other travel</labl>
+      </catgry>
+      <catgry>
+        <catValu>069</catValu>
+        <labl>No recorded activity</labl>
+      </catgry>
+      <catgry>
+        <catValu>099</catValu>
+        <labl>Missing</labl>
+      </catgry>
+      <concept vocab="IPUMS">Episode details Variables -- ACTIVITY</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="SEC" files="ExtractData" name="SEC" intrvl="discrete" dcml="0" rectype="3">
+      <location StartPos="68" width="3" EndPos="70"/>
+      <labl>Secondary activity</labl>
+      <txt><![CDATA[SEC is a 69 category coding scheme for secondary activities (activities done at the same time as a primary activity (see MAIN). A value of -9 indicates that there was no secondary activity reported. 
+
+Note that simultaneous activities do not necessarily sum to 1440, nor should the user attempt to do so. 
+
+While people may undertake more than one activity at the same time (such as driving while listening to the radio), the surveys harmonized here have highly variant instructions about the degree of detail respondents should try to capture in the recording of secondary activities. Also, the degree of commitment implied by different combinations of activities is not the same. 
+
+Users of time use data should consider the nature of their analytic needs in deciding whether and how to include secondary activities. In some cases, some combinations of simultaneous activities will count as new activities added to the instances of singular or focused activity, and the total time spent in the day across this expanded and customized list of activities should total 1440 minutes. Which secondary activity combinations are relevant will vary by the focus of the research. The secondary activities are coded using the 69 category list also used to code main activities. 
+
+In some diary surveys, diarists were able to report more than one secondary activity. Where this occurs (for example, UK 1987), the episode was split into sub-episodes that total to the same length of the original episode, one new episode for each reported secondary activity. In these cases, the main activity was coded and context information as applying across all elements of the split episode, except where there is a clear transition to travel. Users can identify these cases as these sub episodes have the same value for the variable CLOCKST, while all un-split episodes have different values for CLOCKST (the start time of the episode on the clock).]]></txt>
+      <catgry>
+        <catValu>001</catValu>
+        <labl>Imputed personal or household care</labl>
+      </catgry>
+      <catgry>
+        <catValu>002</catValu>
+        <labl>Sleep and naps</labl>
+      </catgry>
+      <catgry>
+        <catValu>003</catValu>
+        <labl>Imputed sleep</labl>
+      </catgry>
+      <catgry>
+        <catValu>004</catValu>
+        <labl>Wash, dress, care for self</labl>
+      </catgry>
+      <catgry>
+        <catValu>005</catValu>
+        <labl>Meals at work or school</labl>
+      </catgry>
+      <catgry>
+        <catValu>006</catValu>
+        <labl>Meals or snacks in other places</labl>
+      </catgry>
+      <catgry>
+        <catValu>007</catValu>
+        <labl>Paid work-main job (not at home)</labl>
+      </catgry>
+      <catgry>
+        <catValu>008</catValu>
+        <labl>Paid work at home</labl>
+      </catgry>
+      <catgry>
+        <catValu>009</catValu>
+        <labl>Second or other job not at home</labl>
+      </catgry>
+      <catgry>
+        <catValu>010</catValu>
+        <labl>Unpaid work to generate household income</labl>
+      </catgry>
+      <catgry>
+        <catValu>011</catValu>
+        <labl>Travel as a part of work</labl>
+      </catgry>
+      <catgry>
+        <catValu>012</catValu>
+        <labl>Work breaks</labl>
+      </catgry>
+      <catgry>
+        <catValu>013</catValu>
+        <labl>Other time at workplace</labl>
+      </catgry>
+      <catgry>
+        <catValu>014</catValu>
+        <labl>Look for work</labl>
+      </catgry>
+      <catgry>
+        <catValu>015</catValu>
+        <labl>Regular schooling, education</labl>
+      </catgry>
+      <catgry>
+        <catValu>016</catValu>
+        <labl>Homework</labl>
+      </catgry>
+      <catgry>
+        <catValu>017</catValu>
+        <labl>Leisure and  other education or training</labl>
+      </catgry>
+      <catgry>
+        <catValu>018</catValu>
+        <labl>Food preparation, cooking</labl>
+      </catgry>
+      <catgry>
+        <catValu>019</catValu>
+        <labl>Set table, wash/put away dishes</labl>
+      </catgry>
+      <catgry>
+        <catValu>020</catValu>
+        <labl>Cleaning</labl>
+      </catgry>
+      <catgry>
+        <catValu>021</catValu>
+        <labl>Laundry, ironing, clothing repair</labl>
+      </catgry>
+      <catgry>
+        <catValu>022</catValu>
+        <labl>Maintain home/vehicle, including collect fuel</labl>
+      </catgry>
+      <catgry>
+        <catValu>023</catValu>
+        <labl>Other domestic work</labl>
+      </catgry>
+      <catgry>
+        <catValu>024</catValu>
+        <labl>Purchase goods</labl>
+      </catgry>
+      <catgry>
+        <catValu>025</catValu>
+        <labl>Consume personal care services</labl>
+      </catgry>
+      <catgry>
+        <catValu>026</catValu>
+        <labl>Consume other services</labl>
+      </catgry>
+      <catgry>
+        <catValu>027</catValu>
+        <labl>Pet care (not walk dog)</labl>
+      </catgry>
+      <catgry>
+        <catValu>028</catValu>
+        <labl>Physical, medical child care</labl>
+      </catgry>
+      <catgry>
+        <catValu>029</catValu>
+        <labl>Teach, help with homework</labl>
+      </catgry>
+      <catgry>
+        <catValu>030</catValu>
+        <labl>Read to, talk or play with child</labl>
+      </catgry>
+      <catgry>
+        <catValu>031</catValu>
+        <labl>Supervise, accompany, other child care</labl>
+      </catgry>
+      <catgry>
+        <catValu>032</catValu>
+        <labl>Adult care</labl>
+      </catgry>
+      <catgry>
+        <catValu>033</catValu>
+        <labl>Voluntary, civic, organisational act</labl>
+      </catgry>
+      <catgry>
+        <catValu>034</catValu>
+        <labl>Worship and religion</labl>
+      </catgry>
+      <catgry>
+        <catValu>035</catValu>
+        <labl>General out-of-home leisure</labl>
+      </catgry>
+      <catgry>
+        <catValu>036</catValu>
+        <labl>Attend sporting event</labl>
+      </catgry>
+      <catgry>
+        <catValu>037</catValu>
+        <labl>Cinema, theatre, opera, concert</labl>
+      </catgry>
+      <catgry>
+        <catValu>038</catValu>
+        <labl>Other public event, venue</labl>
+      </catgry>
+      <catgry>
+        <catValu>039</catValu>
+        <labl>Restaurant, café, bar, pub</labl>
+      </catgry>
+      <catgry>
+        <catValu>040</catValu>
+        <labl>Party, social event, gambling</labl>
+      </catgry>
+      <catgry>
+        <catValu>041</catValu>
+        <labl>Imputed time away from home</labl>
+      </catgry>
+      <catgry>
+        <catValu>042</catValu>
+        <labl>General sport or exercise</labl>
+      </catgry>
+      <catgry>
+        <catValu>043</catValu>
+        <labl>Walking</labl>
+      </catgry>
+      <catgry>
+        <catValu>044</catValu>
+        <labl>Cycling</labl>
+      </catgry>
+      <catgry>
+        <catValu>045</catValu>
+        <labl>Other outside recreation</labl>
+      </catgry>
+      <catgry>
+        <catValu>046</catValu>
+        <labl>Gardening/pick mushrooms</labl>
+      </catgry>
+      <catgry>
+        <catValu>047</catValu>
+        <labl>Walk dogs</labl>
+      </catgry>
+      <catgry>
+        <catValu>048</catValu>
+        <labl>Receive or visit friends</labl>
+      </catgry>
+      <catgry>
+        <catValu>049</catValu>
+        <labl>Conversation (in person, phone)</labl>
+      </catgry>
+      <catgry>
+        <catValu>050</catValu>
+        <labl>Games (social and  solitary)/other in-home social</labl>
+      </catgry>
+      <catgry>
+        <catValu>051</catValu>
+        <labl>General indoor leisure</labl>
+      </catgry>
+      <catgry>
+        <catValu>052</catValu>
+        <labl>Art or music</labl>
+      </catgry>
+      <catgry>
+        <catValu>053</catValu>
+        <labl>Correspondence (not e-mail)</labl>
+      </catgry>
+      <catgry>
+        <catValu>054</catValu>
+        <labl>Knit, crafts or hobbies</labl>
+      </catgry>
+      <catgry>
+        <catValu>055</catValu>
+        <labl>Relax, think, do nothing</labl>
+      </catgry>
+      <catgry>
+        <catValu>056</catValu>
+        <labl>Read</labl>
+      </catgry>
+      <catgry>
+        <catValu>057</catValu>
+        <labl>Listen to music or other audio content</labl>
+      </catgry>
+      <catgry>
+        <catValu>058</catValu>
+        <labl>Listen to radio</labl>
+      </catgry>
+      <catgry>
+        <catValu>059</catValu>
+        <labl>Watch tv, video, dvd, streamed film</labl>
+      </catgry>
+      <catgry>
+        <catValu>060</catValu>
+        <labl>Computer games</labl>
+      </catgry>
+      <catgry>
+        <catValu>061</catValu>
+        <labl>E-mail, surf internet, computing</labl>
+      </catgry>
+      <catgry>
+        <catValu>062</catValu>
+        <labl>No activity, imputed or recorded transport</labl>
+      </catgry>
+      <catgry>
+        <catValu>063</catValu>
+        <labl>Travel to/from work</labl>
+      </catgry>
+      <catgry>
+        <catValu>064</catValu>
+        <labl>Education travel</labl>
+      </catgry>
+      <catgry>
+        <catValu>065</catValu>
+        <labl>Voluntary/civic/religious travel</labl>
+      </catgry>
+      <catgry>
+        <catValu>066</catValu>
+        <labl>Child/adult care travel</labl>
+      </catgry>
+      <catgry>
+        <catValu>067</catValu>
+        <labl>Shop, person/hhld care travel</labl>
+      </catgry>
+      <catgry>
+        <catValu>068</catValu>
+        <labl>Other travel</labl>
+      </catgry>
+      <catgry>
+        <catValu>069</catValu>
+        <labl>No recorded activity</labl>
+      </catgry>
+      <catgry>
+        <catValu>-09</catValu>
+        <labl>Could not be created</labl>
+      </catgry>
+      <catgry>
+        <catValu>099</catValu>
+        <labl>No secondary activity in study</labl>
+      </catgry>
+      <concept vocab="IPUMS">Episode details Variables -- ACTIVITY</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="ELOC" files="ExtractData" name="ELOC" intrvl="discrete" dcml="0" rectype="3">
+      <location StartPos="71" width="2" EndPos="72"/>
+      <labl>Location or mode of transport</labl>
+      <txt><![CDATA[ELOC reports the location where the activity was performed.
+
+Some of the locations can be inferred and are reflected in the data. For example, if there is no code for school, but the activity is formal schooling and the location is away from home, it is reasonable to infer that the location is school. Similarly, if the activity is attend religious service and the location is other not at home, this location reasonably can be inferred to be at a place of worship.
+
+ELOC is only available if you select a hierarchical extract. If you request a hierarchical extract and plan to construct time use variables in your statistics package, this variable may be useful to you. Alternatively, you may use construct a time use variable as part of this system.]]></txt>
+      <catgry>
+        <catValu>-8</catValu>
+        <labl>Location unknown</labl>
+      </catgry>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>At own home</labl>
+      </catgry>
+      <catgry>
+        <catValu>02</catValu>
+        <labl>At another's home</labl>
+      </catgry>
+      <catgry>
+        <catValu>03</catValu>
+        <labl>At workplace</labl>
+      </catgry>
+      <catgry>
+        <catValu>04</catValu>
+        <labl>At school</labl>
+      </catgry>
+      <catgry>
+        <catValu>05</catValu>
+        <labl>At services or shops</labl>
+      </catgry>
+      <catgry>
+        <catValu>06</catValu>
+        <labl>At restaurant, bar etc</labl>
+      </catgry>
+      <catgry>
+        <catValu>07</catValu>
+        <labl>At place of worship</labl>
+      </catgry>
+      <catgry>
+        <catValu>08</catValu>
+        <labl>Travelling</labl>
+      </catgry>
+      <catgry>
+        <catValu>09</catValu>
+        <labl>Other locations</labl>
+      </catgry>
+      <concept vocab="IPUMS">Episode details Variables -- ACTIVITY</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="INOUT" files="ExtractData" name="INOUT" intrvl="discrete" dcml="0" rectype="3">
+      <location StartPos="73" width="2" EndPos="74"/>
+      <labl>Activity outside, inside or in vehicle</labl>
+      <txt><![CDATA[INOUT reports whether an activity took place inside, outside, or in a vehicle. Any activity where there is a vehicle recorded as a mode of transport is coded as 3 (travelling). More detailed information about location is available in ELOC.
+
+The original location codes are used to identify locations that are outside (in the yard of own home, at the beach or countryside, children's play area, and the like). Walking and cycling for transport and most walking and cycling as sport takes place outside.]]></txt>
+      <catgry>
+        <catValu>-8</catValu>
+        <labl>Location unknown</labl>
+      </catgry>
+      <catgry>
+        <catValu>-9</catValu>
+        <labl>Could not be created</labl>
+      </catgry>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>Inside</labl>
+      </catgry>
+      <catgry>
+        <catValu>02</catValu>
+        <labl>Outside</labl>
+      </catgry>
+      <catgry>
+        <catValu>03</catValu>
+        <labl>In vehicle</labl>
+      </catgry>
+      <concept vocab="IPUMS">Episode details Variables -- ACTIVITY</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="MTRAV" files="ExtractData" name="MTRAV" intrvl="discrete" dcml="0" rectype="3">
+      <location StartPos="75" width="2" EndPos="76"/>
+      <labl>Mode of travel</labl>
+      <txt><![CDATA[MTRAV reports mode of transport. 
+
+For those cases identified as unrecorded travel, the mode of transport is coded as travel by unspecified means. 
+
+Users should note that where the original survey records an activity such as walking for pleasure, jogging or hiking and no mode of transport is recorded; MTRAV is coded as walk/on foot. Where the activity is coded as a sport that also involves physically active travel (cycling, riding a horse etc.) and no mode of transport is recorded, MTRAV is coded as cycle or other active transport.]]></txt>
+      <catgry>
+        <catValu>-7</catValu>
+        <labl>Not travelling</labl>
+      </catgry>
+      <catgry>
+        <catValu>-8</catValu>
+        <labl>Missing</labl>
+      </catgry>
+      <catgry>
+        <catValu>-9</catValu>
+        <labl>Could not be created</labl>
+      </catgry>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>Travel by car etc</labl>
+      </catgry>
+      <catgry>
+        <catValu>02</catValu>
+        <labl>Public transport</labl>
+      </catgry>
+      <catgry>
+        <catValu>03</catValu>
+        <labl>Walk / on foot</labl>
+      </catgry>
+      <catgry>
+        <catValu>04</catValu>
+        <labl>Other physical transport</labl>
+      </catgry>
+      <catgry>
+        <catValu>05</catValu>
+        <labl>Other/unspecified transport</labl>
+      </catgry>
+      <concept vocab="IPUMS">Episode details Variables -- ACTIVITY</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="ACT_CHCARE" files="ExtractData" name="ACT_CHCARE" intrvl="contin" dcml="0" rectype="2">
+      <location StartPos="88" width="4" EndPos="91"/>
+      <labl>ACT: Child care</labl>
+      <txt><![CDATA[ACT: Child care]]></txt>
+      <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="ACT_CIVIC" files="ExtractData" name="ACT_CIVIC" intrvl="contin" dcml="0" rectype="2">
+      <location StartPos="92" width="4" EndPos="95"/>
+      <labl>ACT: Adult care, civic, voluntary, and religious activities</labl>
+      <txt><![CDATA[ACT: Adult care, civic, voluntary, and religious activities]]></txt>
+      <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="ACT_EDUCA" files="ExtractData" name="ACT_EDUCA" intrvl="contin" dcml="0" rectype="2">
+      <location StartPos="96" width="4" EndPos="99"/>
+      <labl>ACT: Education</labl>
+      <txt><![CDATA[ACT: Education]]></txt>
+      <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="ACT_OUTHOME" files="ExtractData" name="ACT_OUTHOME" intrvl="contin" dcml="0" rectype="2">
+      <location StartPos="100" width="4" EndPos="103"/>
+      <labl>ACT: Out of home free time and leisure</labl>
+      <txt><![CDATA[ACT: Out of home free time and leisure]]></txt>
+      <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="ACT_PCARE" files="ExtractData" name="ACT_PCARE" intrvl="contin" dcml="0" rectype="2">
+      <location StartPos="104" width="4" EndPos="107"/>
+      <labl>ACT: Personal care</labl>
+      <txt><![CDATA[ACT: Personal care]]></txt>
+      <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="ACT_PHYSICAL" files="ExtractData" name="ACT_PHYSICAL" intrvl="contin" dcml="0" rectype="2">
+      <location StartPos="108" width="4" EndPos="111"/>
+      <labl>ACT: Sports, exercise, and outdoor activities</labl>
+      <txt><![CDATA[ACT: Sports, exercise, and outdoor activities]]></txt>
+      <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="ACT_TRAVEL" files="ExtractData" name="ACT_TRAVEL" intrvl="contin" dcml="0" rectype="2">
+      <location StartPos="112" width="4" EndPos="115"/>
+      <labl>ACT: Travel</labl>
+      <txt><![CDATA[ACT: Travel]]></txt>
+      <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="ACT_UNDOM" files="ExtractData" name="ACT_UNDOM" intrvl="contin" dcml="0" rectype="2">
+      <location StartPos="116" width="4" EndPos="119"/>
+      <labl>ACT: Unpaid domestic work</labl>
+      <txt><![CDATA[ACT: Unpaid domestic work]]></txt>
+      <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="ACT_WORK" files="ExtractData" name="ACT_WORK" intrvl="contin" dcml="0" rectype="2">
+      <location StartPos="120" width="4" EndPos="123"/>
+      <labl>ACT: Paid Work</labl>
+      <txt><![CDATA[ACT: Paid Work]]></txt>
+      <codInstr><![CDATA[This is a 4-digit numeric variable with 0 implied decimal places]]></codInstr>
+      <concept vocab="IPUMS">Time Use Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+  </dataDscr>
+</codeBook>
